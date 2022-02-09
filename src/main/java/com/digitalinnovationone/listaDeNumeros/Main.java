@@ -24,15 +24,13 @@ public class Main {
             System.out.println("Informe um número: ");
 
             do {
+
                 try {
-                    numero = scan.nextInt();
+                    numero = Integer.parseInt(scan.nextLine());
                     loopcontinue = false;
-                    if (listaNumeros.contains(numero)){
-                        System.out.println("Não pode repetir o números! digite novamente: ");
-                        loopcontinue = true;
-                    }
                 }catch (NumberFormatException e){
-                    System.out.println("Digite somente números");
+                    System.out.println("Informe somente números!!");
+
                 }
             }while (loopcontinue);
 
@@ -40,9 +38,10 @@ public class Main {
         }
         for (Integer num : listaNumeros) {
             soma +=  num;
-            if (num > 10 && num <= 50){
+            if (num > 10 ){
                 acimaDez.add(num);
-            }else if (num > 50){
+            }
+            if (num > 50){
                 acimaCinquenta.add(num);
             }
         }
@@ -51,7 +50,7 @@ public class Main {
         System.out.println("O menor número é " + Collections.min(listaNumeros));
         System.out.printf("A média aritimética é %.1f \n", soma / 5);
         System.out.println("Existe '" + acimaDez.size() + "' acima de dez e é (são) "+ acimaDez );
-        System.out.println("Existe '" + acimaCinquenta.size() + "' acima de dez e é (são) "+ acimaCinquenta );
+        System.out.println("Existe '" + acimaCinquenta.size() + "' acima de cinquenta e é (são) "+ acimaCinquenta );
 
 
 
