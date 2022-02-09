@@ -5,6 +5,19 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Lista de números
+ *         Receba do usuário 10 números e exiba:
+ *         • O maior número
+ *         • O menor número
+ *         • A média aritmética
+ *         • Quantos números são acima de 10 e quais são eles
+ *         • Quantos números são acima de 50 e quais são eles
+ *         O usuário não poderá digitar números repetidos e deve ser validada a entrada apenas de números
+ *         inteiros.
+ * @author Everton Dutra
+ */
+
 public class Main {
     public static void main(String[] args) {
 
